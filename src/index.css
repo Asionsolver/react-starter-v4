@@ -90,6 +90,6 @@
 }
 
 
-.right-panel .content, .right-panel .image{
+/* .right-panel .content, .right-panel .image{
   @apply transform translate-x-[800px] ;
-}
+} */

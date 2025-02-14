@@ -1,8 +1,5 @@
-// import Login from "./auth/Login"
-
 import Login from "./auth/Login"
 import Signup from "./auth/Signup"
-
 import leftImg from "../assets/auth/log.svg"
 import rightImg from "../assets/auth/register.svg"
 import { useState } from "react"
@@ -32,20 +29,20 @@ const AuthForm = () => {
 
             <div className="panel-container">
                 <div className={`panel left-panel `}>
-                    <div className={`content ${modeChange ? 'transform translate-x-[-800px]' : ''}`}>
-                        <h3 className="heading-two">New here?</h3>
+                    <div className={`content ${modeChange ? 'transform translate-x-[-800px]' : 'transform translate-x-0'}`}>
+                        <h3 className="heading-two">Log here?</h3>
                         <p className="heading-text">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                             ex ratione. Aliquid!
                         </p>
                         <button className="btn transparent cursor-pointer" id="sign-up-btn" onClick={handleSignUpMode}>Sign up</button>
                     </div>
-                    <img src={leftImg} className={`image ${modeChange ? 'transform translate-x-[-800px]' : ''}`} alt="" />
+                    <img src={leftImg} className={`image ${modeChange ? 'transform translate-x-[-800px]' : 'transform translate-x-0'}`} alt="" />
                 </div>
 
 
-                <div className="panel right-panel">
-                    <div className="content">
+                <div className={`panel right-panel `}>
+                    <div className={`content ${modeChange ? 'transform translate-x-[0px]' : 'transform translate-x-[800px]'}`}>
                         <h3 className="heading-two">New here?</h3>
                         <p className="heading-text">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
@@ -53,7 +50,7 @@ const AuthForm = () => {
                         </p>
                         <button className="btn transparent cursor-pointer" id="sign-in-btn" >Sign in</button>
                     </div>
-                    <img src={rightImg} className='image' alt="" />
+                    <img src={rightImg} className={`image ${modeChange ? 'transform translate-x-[0px]' : 'transform translate-x-[800px]'}`} alt="" />
                 </div>
 
             </div>
