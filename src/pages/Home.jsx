@@ -1,11 +1,11 @@
-
+import AuthForm from "@/components/AuthForm";
 
 const Home = () => {
-    return (
-      <>
-       <h1 className="font-bold">Home</h1>
-      </>
-    );
-  };
-  
-  export default Home;
+  return (
+    <>
+      <AuthForm />
+    </>
+  );
+};
+
+export default Home;

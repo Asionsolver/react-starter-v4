@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-display: "Poppins", "sans-serif"; 
+}
+
+.container{
+  @apply min-h-screen max-w-full relative md:min-h-[50rem] md:h-screen overflow-hidden before:content-[''] before:duration-[1800ms] before:ease-in-out before:absolute before:bg-[linear-gradient(-45deg,#16CABF,#0E746E)] before:w-[1200px] before:h-[1200px] before:bottom-[-15%] before:rounded-full before:z-[6] 
+}
+.signin-signup{
+  @apply absolute top-[50%] transform -translate-x-1/2 -translate-y-1/2 grid grid-cols-1 w-[50%] z-[5] transition duration-[1000ms] delay-[600ms] ease-in-out;
+}
+.forms-container{
+  @apply absolute w-full h-full top-0 left-0 ;
+}
+.form-container{
+  @apply flex items-center justify-center flex-col col-start-1 col-end-2 row-start-1 row-end-2 px-[5rem] overflow-hidden duration-200 delay-700 ease-in-out;
+}
+
+.form-container.sign-in-form{
+  @apply z-2;
+}
+.form-container.sign-up-form{
+  @apply z-1 opacity-0;
+}
+.title{
+  @apply text-4xl font-bold text-gray-700 mb-[.625rem];
+}
+
+.input-field{
+  @apply max-w-sm w-full h-[3.4375rem] bg-[#F2F2F2] my-2.5 rounded-xl grid grid-cols-[15%_85%] px-[0.4rem];
+}
+
+.btn{
+  @apply w-[380px] h-[3.0625rem] bg-[#5995fd] mt-[1.6rem] mb-2.5 rounded-xl text-white text-lg uppercase font-semibold hover:bg-[#4d84e2];
+}
+
+.btn.transparent{
+  @apply m-0 bg-transparent border-2 border-[#fff] w-[8.125rem] h-[2.625rem] font-semibold text-[0.8rem]
+}
+.social-media{
+  @apply flex justify-center
+}
+
+.social-icon{
+  @apply h-[2.875rem] w-[2.875rem] border text-[1.1rem] border-[#333] rounded-full flex items-center justify-center mx-2.5 hover:text-[#4481eb] hover:border-[#4481eb];
+}
+
+.panel-container{
+  @apply absolute w-full h-full top-0 left-0 grid grid-cols-2 ;
+}
+
+.image{
+  @apply  w-full transition duration-[1100ms] delay-[600ms] ease-in-out;
+}
+
+.panel{
+  @apply flex items-end flex-col justify-around text-center z-[7];
+}
+
+.panel .content{
+  @apply transition duration-[900ms] delay-[600ms] ease-in-out;
+}
+
+
+.left-panel{
+  @apply pt-[3rem] pr-[17%] pb-8 pl-[12%] text-white ;
+}
+.right-panel{
+  @apply pt-[3rem] pr-[12%] pb-8 pl-[17%] text-white  ;
+}
+
+/* .right-panel .content, .right-panel .image{
+  @apply transform translate-x-[800px] ;
+} */
+
+
