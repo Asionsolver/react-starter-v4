@@ -31,8 +31,8 @@ const AuthForm = () => {
             </div>
 
             <div className="panel-container">
-                <div className="panel left-panel">
-                    <div className="content">
+                <div className={`panel left-panel `}>
+                    <div className={`content ${modeChange ? 'transform translate-x-[-800px]' : ''}`}>
                         <h3 className="heading-two">New here?</h3>
                         <p className="heading-text">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
@@ -40,7 +40,7 @@ const AuthForm = () => {
                         </p>
                         <button className="btn transparent cursor-pointer" id="sign-up-btn" onClick={handleSignUpMode}>Sign up</button>
                     </div>
-                    <img src={leftImg} className="image" alt="" />
+                    <img src={leftImg} className={`image ${modeChange ? 'transform translate-x-[-800px]' : ''}`} alt="" />
                 </div>
 
 

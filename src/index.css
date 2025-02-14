@@ -82,7 +82,7 @@
 }
 
 .image{
-  @apply w-full
+  @apply w-full transition duration-[1100ms] delay-[400ms] ease-in-out
 }
 
 .btn.transparent{
