@@ -5,14 +5,15 @@ import Signup from "./auth/Signup"
 
 import leftImg from "../assets/auth/log.svg"
 import rightImg from "../assets/auth/register.svg"
-// import { useState } from "react"
+import { useState } from "react"
 
 const AuthForm = () => {
-    // const [modeChange, setModeChange] = useState(false)
+    const [modeChange, setModeChange] = useState(false)
 
-    // const handleSignUpMode = () => {
-    //     setModeChange(true)
-    // }
+    const handleSignUpMode = () => {
+        // console.log('clicked')
+        setModeChange(true)
+    }
 
     // const handleSignInMode = () => {
     //     setModeChange(false)
@@ -21,7 +22,7 @@ const AuthForm = () => {
 
 
     return (
-        <div className="container">
+        <div className={`container  ${modeChange ? ' before:translate-x-[100%] before:translate-y-[-50%] before:right-[52%]' : ' before:right-[48%] before:translate-y-[-50%]'}`}>
             <div className="forms-container">
                 <div className="signin-signup">
                     <Login />
@@ -37,7 +38,7 @@ const AuthForm = () => {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                             ex ratione. Aliquid!
                         </p>
-                        <button className="btn transparent cursor-pointer" id="sign-up-btn" >Sign up</button>
+                        <button className="btn transparent cursor-pointer" id="sign-up-btn" onClick={handleSignUpMode}>Sign up</button>
                     </div>
                     <img src={leftImg} className="image" alt="" />
                 </div>
