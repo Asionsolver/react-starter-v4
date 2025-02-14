@@ -19,11 +19,11 @@ const AuthForm = () => {
 
 
     return (
-        <div className={`container  ${modeChange ? ' before:translate-x-[100%] before:translate-y-[-50%] before:right-[52%]' : ' before:right-[48%] before:translate-y-[-50%]'}`}>
+        <div className={`container  ${modeChange ? ' before:translate-x-[100%] before:translate-y-[-50%] before:right-[52%]' : 'before:right-[48%] before:translate-y-[-50%]'}`}>
             <div className="forms-container">
-                <div className="signin-signup">
-                    <Login />
-                    <Signup />
+                <div className={`signin-signup ${modeChange ? 'left-[25%]' : 'left-[75%]'}`}>
+                    <Login modeChange={modeChange} />
+                    <Signup modeChange={modeChange} />
                 </div>
             </div>
 

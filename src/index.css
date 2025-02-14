@@ -21,19 +21,19 @@
 }
 
 .signin-signup{
-  @apply absolute top-[50%] transform translate-x-[-50%] translate-y-[-50%] w-[50%] left-[75%] transition duration-[1000ms] delay-[700ms] ease-in-out grid grid-cols-1 z-5;
+  @apply absolute top-[50%] transform translate-x-[-50%] translate-y-[-50%] w-[50%] transition duration-[1000ms] delay-[700ms] ease-in-out grid grid-cols-1 z-5;
 }
 
 .form-container{
   @apply flex flex-col items-center justify-center col-start-1 col-end-2 row-start-1 row-end-2 px-20 overflow-hidden transition-all duration-[200ms] delay-[700ms];
 }
-
+/* 
 .form-container.sign-in-form{
   @apply z-2;
 }
 .form-container.sign-up-form{
   @apply z-1 opacity-0;
-}
+} */
 
 .title{
   @apply text-3xl font-semibold text-primary mb-5 ;

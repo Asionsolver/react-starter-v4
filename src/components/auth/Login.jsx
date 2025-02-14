@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { FaEnvelope } from "react-icons/fa";
 import googleIcon from "../../assets/brand/google.png"
@@ -5,9 +6,9 @@ import faceBook from "../../assets/brand/facebook.png"
 import { FaLock } from "react-icons/fa";
 
 const Login = ({ modeChange }) => {
-
+    // ${ modeChange ? ' z-2' : 'z-1 opacity-0' }
     return (
-        <form action="#" className="sign-in-form form-container">
+        <form action="#" className={`sign-in-form form-container ${modeChange ? 'z-1 opacity-[0]' : 'z-2'}`}>
             <h2 className="title">Sign in</h2>
             <div className="input-field">
                 <div className="flex items-center justify-center">
