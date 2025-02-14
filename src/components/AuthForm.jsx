@@ -12,9 +12,9 @@ const AuthForm = () => {
         setModeChange(true)
     }
 
-    // const handleSignInMode = () => {
-    //     setModeChange(false)
-    // }
+    const handleSignInMode = () => {
+        setModeChange(false)
+    }
 
 
 
@@ -28,7 +28,7 @@ const AuthForm = () => {
             </div>
 
             <div className="panel-container">
-                <div className={`panel left-panel `}>
+                <div className={`panel left-panel ${modeChange ? "pointer-events-none" : "pointer-events-auto"}`}>
                     <div className={`content ${modeChange ? 'transform translate-x-[-800px]' : 'transform translate-x-0'}`}>
                         <h3 className="heading-two">Log here?</h3>
                         <p className="heading-text">
@@ -41,14 +41,14 @@ const AuthForm = () => {
                 </div>
 
 
-                <div className={`panel right-panel `}>
+                <div className={`panel right-panel ${modeChange ? "pointer-events-auto" : "pointer-events-none"}`}>
                     <div className={`content ${modeChange ? 'transform translate-x-[0px]' : 'transform translate-x-[800px]'}`}>
                         <h3 className="heading-two">New here?</h3>
                         <p className="heading-text">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                             ex ratione. Aliquid!
                         </p>
-                        <button className="btn transparent cursor-pointer" id="sign-in-btn" >Sign in</button>
+                        <button className="btn transparent cursor-pointer" id="sign-in-btn" onClick={handleSignInMode}>Sign in</button>
                     </div>
                     <img src={rightImg} className={`image ${modeChange ? 'transform translate-x-[0px]' : 'transform translate-x-[800px]'}`} alt="" />
                 </div>

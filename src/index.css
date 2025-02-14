@@ -63,10 +63,10 @@
 }
 
 .left-panel{
-  @apply pt-[3rem] pr-[17%] pb-8 pl-[12%] text-white pointer-events-auto;
+  @apply pt-[3rem] pr-[17%] pb-8 pl-[12%] text-white ;
 }
 .right-panel{
-  @apply pt-[3rem] pr-[12%] pb-8 pl-[17%] text-white pointer-events-none ;
+  @apply pt-[3rem] pr-[12%] pb-8 pl-[17%] text-white ;
 }
 
 .panel .content{
