@@ -3,6 +3,7 @@ import Signup from "./auth/Signup"
 import leftImg from "../assets/auth/log.svg"
 import rightImg from "../assets/auth/register.svg"
 import { useState } from "react"
+import { cn } from './../utils/index';
 
 const AuthForm = () => {
     const [modeChange, setModeChange] = useState(false)
@@ -35,7 +36,7 @@ const AuthForm = () => {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                             ex ratione. Aliquid!
                         </p>
-                        <button className="btn transparent cursor-pointer" id="sign-up-btn" onClick={handleSignUpMode}>Sign up</button>
+                        <button className={cn(`btn`, `transparent cursor-pointer`)} id="sign-up-btn" onClick={handleSignUpMode}>Sign up</button>
                     </div>
                     <img src={leftImg} className={`image ${modeChange ? 'transform translate-x-[-800px]' : 'transform translate-x-0'}`} alt="" />
                 </div>
@@ -48,7 +49,7 @@ const AuthForm = () => {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                             ex ratione. Aliquid!
                         </p>
-                        <button className="btn transparent cursor-pointer" id="sign-in-btn" onClick={handleSignInMode}>Sign in</button>
+                        <button className={cn(`btn`, `transparent cursor-pointer`)} id="sign-in-btn" onClick={handleSignInMode}>Sign in</button>
                     </div>
                     <img src={rightImg} className={`image ${modeChange ? 'transform translate-x-[0px]' : 'transform translate-x-[800px]'}`} alt="" />
                 </div>

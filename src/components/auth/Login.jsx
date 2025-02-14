@@ -40,7 +40,7 @@ const Login = ({ modeChange }) => {
                 <div
                     className="w-1/2 bg-[linear-gradient(to_left,#696969_0%,#F0F0F0_100%)] h-[2px] rounded"
                 ></div>
-                <span className="text-xl uppercase text-gray">or</span>
+                <span className="text-lg uppercase text-gray">or</span>
                 <div
                     className="w-1/2 bg-[linear-gradient(to_right,#696969_0%,#F0F0F0_100%)] h-[2px] rounded"
                 ></div>
