@@ -1,14 +1,27 @@
 import { lazy } from "react";
-import AppLayout from "@/components/AppLayout";
 import { useRoutes } from "react-router";
 
 const Home = lazy(() => import("@/pages/Home"));
+const AuthLayout = lazy(() => import("@/components/AuthLayout"));
+const DashBoardLayout = lazy(() => import('@/components/DashBoardLayout'));
+const DashBoard = lazy(() => import("@/pages/DashBoard"));
+
 
 function Routes() {
   const routeElements = useRoutes([
     {
       path: "/",
-      element: <AppLayout />,
+      element: <DashBoardLayout />,
+      children: [
+        {
+          index: true,
+          element: <DashBoard />,
+        },
+      ],
+    },
+    {
+      path: "/auth",
+      element: <AuthLayout />,
       children: [
         {
           index: true,

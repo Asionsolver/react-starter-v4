@@ -10,6 +10,10 @@
   --color-gray: #696969;
   --color-gray-light: #aaa;
   --color-text-primary: #424866;
+
+  /*Custom Breakpoint */
+   --breakpoint-xs: 361px;
+   --breakpoint-xsm: 441px;
 }
 /* before:bottom-[-10%] */
 .container{
@@ -94,3 +98,7 @@
 /* .right-panel .content, .right-panel .image{
   @apply transform translate-x-[800px] ;
 } */
+
+/* ? SideBar Design Start */
+
+/* ? SideBar Design End */
