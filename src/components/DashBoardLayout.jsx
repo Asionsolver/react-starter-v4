@@ -8,14 +8,20 @@ const DashBoardLayout = () => {
     const [open, setOpen] = useState(false);
 
     const handleToggle = () => {
-        // console.log('clicked');
+        console.log('clicked');
         setOpen(!open);
     }
     return (
-        <div>
+        <div className='h-screen bg-gray p-5 relative'>
+            {/* <Navbar handleToggle={handleToggle} open={open} />
+            <Sidebar open={open} />
+            <Outlet context={{ open }} /> */}
+
+
             <Navbar handleToggle={handleToggle} open={open} />
             <Sidebar open={open} />
             <Outlet context={{ open }} />
+
         </div>
     )
 }
