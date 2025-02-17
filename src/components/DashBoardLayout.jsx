@@ -12,7 +12,7 @@ const DashBoardLayout = () => {
         setOpen(!open);
     }
     return (
-        <div className='h-screen bg-gray p-5 relative'>
+        <div className='h-screen bg-black p-5 relative'>
             {/* <Navbar handleToggle={handleToggle} open={open} />
             <Sidebar open={open} />
             <Outlet context={{ open }} /> */}

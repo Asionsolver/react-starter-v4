@@ -4,6 +4,7 @@
 @theme {
   --font-display: "Roboto", "sans-serif"; 
   --color-primary: #16CABF;
+  --color-hover-primary: #D4F8F5;
   --color-pineGreen: #0E746E;
   --color-secondary: #F2F2F2;
   --color-white-light: #FEFEFF;

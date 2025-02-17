@@ -11,96 +11,61 @@
 // import { IoIosLogOut } from "react-icons/io";
 // import { useState } from 'react';
 import { IoSearch } from "react-icons/io5";
-
-
-// const Sidebar = ({ open }) => {
-//     // State to track the currently active item
-//     const [activeItem, setActiveItem] = useState(null);
-
-//     // Function to handle item click and update the active item
-//     const handleItemClick = (itemKey) => {
-//         setActiveItem(itemKey === activeItem ? null : itemKey); // Toggle active state
-//     };
-
-//     return (
-//         <nav className={`sidebar fixed  top-0 bottom-0 z-[100] w-72 bg-amber-50 py-6 m-3 shadow-lg rounded-2xl transition-left  transition-all duration-400 ${open ? "left-0 max-xl:w-[90px]" : "max-xs:w-[max-content] max-xl:left-0  max-xl:m-4  max-xs:-left-[120%] max-xl:w-[316px] "}`} id="sidebar">
-//             <div className="sidebar_container flex flex-col gap-y-12 h-full overflow-hidden">
-//                 <div className={`sidebar__user grid grid-cols-[repeat(2,max-content)] items-center gap-x-4  max-xs:justify-center  max-xs:grid-cols-[max-content] max-xs:p-0 ${open ? "max-xl:pl-6" : "pl-8"}`}>
-//                     <div className="sidebar_img relative w-12 h-12 bg-blue-600 rounded-full overflow-hidden grid justify-items-center">
-//                         <img src={UserImg} alt="" className='absolute w-9 -bottom-[1px]' />
-//                     </div>
-//                     <div className={`sidebar__info max-xs:hidden ${open ? "opacity-0" : ""}`}>
-//                         <h3 className='text-[0.938rem] text-gray-900 transition-colors duration-400'>Ashis Kumar Paul</h3>
-//                         <span className='text-xs text-gray'>asion@gmail.com</span>
-//                     </div>
-//                 </div>
-//                 <div className="sidebar_content flex flex-col gap-y-12 overflow-x-hidden overflow-y-auto">
-//                     <div>
-//                         <h3 className={`sidebar__title w-[max-content] text-xs uppercase font-semibold mb-6 max-xs:mx-auto max-xs:px-2 ${open ? "max-xl:pl-0 max-xl:mx-auto" : "pl-8"}`}>Manage</h3>
-//                         <div className="sidebar__list grid gap-y-6  max-xs:justify-center">
-//                             <a href="#"
-//                                 className={`sidebar__link flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400 hover:text-primary text-gray max-xs:grid-cols-[max-content] max-xs:px-8 ${activeItem === 'dashboard' ? 'text-pineGreen  after:content-[] after:absolute after:left-0 after:w-1 after:h-5 after:bg-pineGreen' : ''}`}
-//                                 onClick={() => handleItemClick('dashboard')}>
-//                                 <MdBarChart />
-//                                 <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Dashboard</span>
-//                             </a>
-//                             <a href="#"
-//                                 className={`sidebar__link flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400 hover:text-primary text-gray max-xs:grid-cols-[max-content] max-xs:px-8 ${activeItem === 'mess' ? 'text-pineGreen after:content-[] after:absolute after:left-0 after:w-1 after:h-5 after:bg-pineGreen' : ''}`}
-//                                 onClick={() => handleItemClick('mess')}>
-//                                 <FiHome />
-//                                 <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Mess</span>
-//                             </a>
-
-//                             <a href="#" className={`sidebar__link flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400  hover:text-primary text-gray max-xs:grid-cols-[max-content] max-xs:px-8`}>
-//                                 <BsPeople />
-//                                 <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Border</span>
-//                             </a>
-//                             <a href="#" className={`sidebar__link flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400  hover:text-primary text-gray max-xs:grid-cols-[max-content] max-xs:px-8`}>
-//                                 <FaRegCalendar />
-//                                 <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Calendar</span>
-//                             </a>
-//                         </div>
-//                     </div>
-//                     <div>
-//                         <h3 className={`sidebar__title w-[max-content] text-xs uppercase font-semibold  mb-6 max-xs:mx-auto max-xs:px-2 ${open ? "max-xl:pl-0 max-xl:mx-auto" : "pl-8"}`}>Settings</h3>
-//                         <div className="sidebar__list grid gap-y-6  max-xs:justify-center">
-//                             <a href="#" className={`sidebar__link flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400  hover:text-primary text-gray max-xs:grid-cols-[max-content] max-xs:px-8`}>
-//                                 <MdOutlineSettings />
-//                                 <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Setting</span>
-//                             </a>
-//                             <a href="#" className={`sidebar__link flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400  hover:text-primary text-gray max-xs:grid-cols-[max-content] max-xs:px-8`}>
-//                                 <IoMailUnreadOutline />
-//                                 <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Mail</span>
-//                             </a>
-//                             <a href="#" className={`sidebar__link flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400  hover:text-primary text-gray max-xs:grid-cols-[max-content] max-xs:px-8`}>
-//                                 <IoMdNotificationsOutline />
-//                                 <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Notification</span>
-//                             </a>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className="sidebar__actions grid gap-y-6 mt-auto  max-xs:justify-center">
-//                     <button className='flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400 hover:text-primary text-gray cursor-pointer max-xs:px-8'>
-//                         <IoMoonOutline className='sidebar__link sidebar__theme ' id='theme-button' />
-//                         <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Theme</span>
-//                     </button>
-//                     <button className='flex items-center gap-x-4 pl-8 transition-colors text-xl duration-400 hover:text-primary text-gray cursor-pointer max-xs:px-8'>
-//                         <IoIosLogOut className='sidebar__link ' />
-//                         <span className={`font-semibold max-xs:hidden ${open ? "opacity-0" : ""}`}>Logout</span>
-//                     </button>
-//                 </div>
-//             </div>
-//         </nav>
-//     )
-// }
+import { FiLogOut } from "react-icons/fi";
+import { MdDashboardCustomize } from "react-icons/md";
+import { FiHome } from "react-icons/fi";
+import { IoPeopleOutline } from "react-icons/io5";
+import { IoSettingsOutline } from "react-icons/io5";
+import { useState } from "react";
 
 
 const Sidebar = ({ open }) => {
+    // State to track the currently active item
+    const [activeItem, setActiveItem] = useState(null);
+
+    // Function to handle item click and update the active item
+    const handleItemClick = (itemKey) => {
+        console.log(itemKey);
+        setActiveItem(itemKey === activeItem ? null : itemKey); // Toggle active state
+    };
+    let Links = [
+        { name: "Dashboard", icon: <MdDashboardCustomize /> },
+        { name: "Mess", icon: <FiHome /> },
+        { name: "Border", icon: <IoPeopleOutline /> },
+        { name: "Setting", icon: <IoSettingsOutline /> },
+    ];
     return (
-        <div className={`h-[95vh] rounded-xl transition-all duration-400 absolute bg-white top-5 flex flex-col items-center max-lg:top-[110px]  ${open ? "w-[90px] max-lg:w-[250px] max-lg:left-5" : "w-[250px] max-lg:-left-[120%]"}`}>
-            <div className={`flex items-center gap-1 ${open ? "pt-3" : "pt-7"}`}>
-                <IoSearch className={`text-3xl text-primary ${open ? "mt-4.5" : ""}`} />
-                <h1 className={`text-2xl uppercase text-primary  font-semibold ${open ? "hidden" : ""}`}>mess search</h1>
+        <div className={`min-h-[calc(100vh-40px)] max-lg:min-h-[calc(100vh-7.5rem)] overflow-y-auto rounded-xl transition-all duration-400 absolute bg-white top-5 flex flex-col items-center max-lg:top-[110px]  ${open ? "w-[90px] max-lg:w-[250px] max-lg:left-5" : "w-[250px] max-lg:-left-[120%]"}`}>
+            <div className={`flex items-center gap-1 ${open ? "pt-3 max-lg:mt-3" : "pt-7"}`}>
+                <IoSearch className={`text-3xl text-primary ${open ? "mt-4.5 max-lg:mt-0" : ""}`} />
+                <h1 className={`text-2xl uppercase text-primary  font-semibold ${open ? "hidden max-lg:contents" : ""}`}>mess search</h1>
+            </div>
+            <ul className="flex flex-col mt-14">
+
+                {Links.map((link) => (
+                    <li
+                        key={link.name}
+                        onClick={() => handleItemClick(link.name)}
+                        className={`text-xl font-semibold py-4  cursor-pointer  ${open ? "max-lg:ml-[-32px] max-lg:rounded-r-full rounded-xl" : "ml-[-32px] rounded-r-full"} ${activeItem === link.name
+                            ? "bg-primary text-white" // Active item style
+                            : "text-text-primary" // Default style
+                            }`}>
+                        <a
+                            href="#"
+                            className={`flex items-center gap-2 ${open ? "max-lg:pr-[49px] max-lg:pl-[41px] px-[18px] " : "pr-[49px]  pl-[41px] "} `}
+                        >
+                            <span className="text-2xl">{link.icon}</span>
+                            <span className={`text-xl font-semibold ${open ? "hidden max-lg:contents" : ""}`}>{link.name}</span>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+
+            <div
+                onClick={() => handleItemClick("Logout")}
+                className={`mt-auto flex items-center font-semibold gap-2 py-4 mb-4 cursor-pointer text-text-primary   ${open ? "max-lg:pr-[84px] max-lg:pl-[50px] max-lg:ml-[-42px] max-lg:rounded-r-full px-[18px]" : "pr-[82px] pl-[41px] ml-[-32px] rounded-r-full"}  ${activeItem === "Logout" ? "bg-primary text-white rounded-xl" : ""}`}>
+                <FiLogOut className="text-2xl" />
+                <span className={`text-xl font-semibold ${open ? "hidden max-lg:contents" : ""}`}>Logout</span>
             </div>
         </div>
     )
