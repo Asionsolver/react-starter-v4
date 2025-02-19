@@ -9,7 +9,7 @@ const DashBoard = () => {
     // console.log(open)
     return (
         // <div className={`main  max-xl:pt-32 max-xl:transition-all max-xl:duration-400 ${open ? "max-xl:pl-[126px]" : "max-xl:pl-[340px]"}`}><h1 className="text-4xl text-gray font-semibold ">Dashboard Content</h1></div>
-        <div className={`bg-white min-h-[calc(100vh-140px)] rounded-xl mt-5  transition-all duration-400 max-lg:ml-0 ${open ? "ml-[120px] " : "ml-[280px] "}`}>
+        <div className={`bg-white border border-text-primary min-h-[calc(100vh-140px)] rounded-xl mt-5  transition-all duration-400 max-lg:ml-0 ${open ? "ml-[120px] " : "ml-[280px] "}`}>
             <div className="p-5 text-text-primary">
                 <div>
                     <h1 className="font-semibold text-2xl">Dashboard</h1>
