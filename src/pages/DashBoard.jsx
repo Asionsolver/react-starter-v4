@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router"
 import Modal from "../components/modal/Modal";
+import MultiStepForm from "../components/multi-step-form/MultistepForm";
+
 
 
 const DashBoard = () => {
@@ -27,18 +29,9 @@ const DashBoard = () => {
                     <Modal
                         isOpen={isModalOpen}
                         onClose={() => setIsModalOpen(false)}
-                        title="Example Modal"
+                        title="Mess Information"
                     >
-                        <div className="space-y-4">
-                            <p>This is an example modal content.</p>
-                            <p>You can put any content here!</p>
-                            <button
-                                onClick={() => setIsModalOpen(false)}
-                                className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 "
-                            >
-                                Close Modal
-                            </button>
-                        </div>
+                        <MultiStepForm setIsModalOpen={setIsModalOpen} />
                     </Modal>
                 </div>
             </div>

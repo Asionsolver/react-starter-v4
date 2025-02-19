@@ -29,7 +29,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 
 
             <div
-                className={`relative  w-full max-w-lg t  bg-white border border-secondary rounded-2xl shadow-sm transform transition-all duration-400 ${isOpen ? 'scale-100' : 'scale-95'} `}
+                className={`relative  w-full max-w-7xl t  bg-white border border-secondary rounded-2xl shadow-sm transform transition-all duration-400 ${isOpen ? 'scale-100' : 'scale-95'} `}
 
             >
                 <div className="mb-4 p-4  border-b border-secondary  flex items-center justify-between">

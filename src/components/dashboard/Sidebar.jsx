@@ -1,15 +1,4 @@
 /* eslint-disable react/prop-types */
-// import UserImg from '../../assets/people/perfil.png'
-// import { MdBarChart } from "react-icons/md";
-// import { FiHome } from "react-icons/fi";
-// import { BsPeople } from "react-icons/bs";
-// import { MdOutlineSettings } from "react-icons/md";
-// import { FaRegCalendar } from "react-icons/fa";
-// import { IoMailUnreadOutline } from "react-icons/io5";
-// import { IoMdNotificationsOutline } from "react-icons/io";
-// import { IoMoonOutline } from "react-icons/io5";
-// import { IoIosLogOut } from "react-icons/io";
-// import { useState } from 'react';
 import { IoSearch } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
 import { MdDashboardCustomize } from "react-icons/md";
@@ -46,7 +35,7 @@ const Sidebar = ({ open }) => {
                     <li
                         key={link.name}
                         onClick={() => handleItemClick(link.name)}
-                        className={`relative text-xl font-semibold py-4  cursor-pointer  ${open ? "max-lg:ml-[-32px] max-lg:rounded-r-full rounded-xl" : "ml-[-32px] rounded-r-full"} ${activeItem === link.name
+                        className={`relative  group  text-xl font-semibold py-4  cursor-pointer  ${open ? "max-lg:ml-[-32px] max-lg:rounded-r-full rounded-xl" : "ml-[-32px] rounded-r-full"} ${activeItem === link.name
                             ? "bg-primary text-white" // Active item style
                             : "text-text-primary" // Default style
                             }`}>
@@ -57,22 +46,34 @@ const Sidebar = ({ open }) => {
                             <span className="text-2xl">{link.icon}</span>
                             <span className={`text-xl font-semibold ${open ? "hidden max-lg:contents" : ""}`}>{link.name}</span>
                         </a>
-                        {/* <span
-                            className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-indigo-100 text-indigo-800 text-sm `}
-                        >
-                            {activeItem}
-                        </span> */}
+                        {
+                            open && <span
+                                className={`max-lg:hidden absolute left-full rounded-md px-2 py-2 ml-6 mt-[-30px]  text-primary bg-white text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0`}
+                            >
+                                {link.name}
+                            </span>
+                        }
                     </li>
 
                 ))}
 
             </ul>
 
+
             <div
                 onClick={() => handleItemClick("Logout")}
-                className={`mt-auto flex items-center font-semibold gap-2 py-4 mb-4 cursor-pointer text-text-primary   ${open ? "max-lg:pr-[84px] max-lg:pl-[50px] max-lg:ml-[-42px] max-lg:rounded-r-full px-[18px]" : "pr-[82px] pl-[41px] ml-[-32px] rounded-r-full"}  ${activeItem === "Logout" ? "bg-primary text-white rounded-xl" : ""}`}>
+                className={`relative mt-auto group  flex items-center font-semibold gap-2 py-4 mb-4 cursor-pointer text-text-primary   ${open ? "max-lg:ml-[-36px] max-lg:pr-[81px] max-lg:pl-[38px]  max-lg:rounded-r-full px-[18px]" : "pr-[82px] pl-[41px] ml-[-32px] rounded-r-full"}  ${activeItem === "Logout" ? "bg-primary text-white rounded-xl" : ""}`}>
                 <FiLogOut className="text-2xl" />
                 <span className={`text-xl font-semibold ${open ? "hidden max-lg:contents" : ""}`}>Logout</span>
+
+                {
+                    open && <span
+                        className={`max-lg:hidden absolute left-full rounded-md px-2 py-2 ml-6 mt-[0px]  text-primary bg-white text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0 `}
+                    >
+                        Logout
+                    </span>
+                }
+
             </div>
         </div>
     )
@@ -80,3 +81,4 @@ const Sidebar = ({ open }) => {
 
 export default Sidebar
 
+// 
