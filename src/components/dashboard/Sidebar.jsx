@@ -35,18 +35,18 @@ const Sidebar = ({ open }) => {
         { name: "Setting", icon: <IoSettingsOutline /> },
     ];
     return (
-        <div className={`min-h-[calc(100vh-40px)] max-lg:min-h-[calc(100vh-7.5rem)] overflow-y-auto rounded-xl transition-all duration-400 absolute bg-white top-5 flex flex-col items-center max-lg:top-[110px]  ${open ? "w-[90px] max-lg:w-[250px] max-lg:left-5" : "w-[250px] max-lg:-left-[120%]"}`}>
+        <div className={`min-h-[calc(100vh-40px)] max-lg:min-h-[calc(100vh-7.5rem)] rounded-xl transition-all duration-400 absolute bg-white top-5 flex flex-col items-center max-lg:top-[110px]  ${open ? "w-[90px] max-lg:w-[250px] max-lg:left-5" : "w-[250px] max-lg:-left-[120%]"}`}>
             <div className={`flex items-center gap-1 ${open ? "pt-3 max-lg:mt-3" : "pt-7"}`}>
                 <IoSearch className={`text-3xl text-primary ${open ? "mt-4.5 max-lg:mt-0" : ""}`} />
                 <h1 className={`text-2xl uppercase text-primary  font-semibold ${open ? "hidden max-lg:contents" : ""}`}>mess search</h1>
             </div>
-            <ul className="flex flex-col mt-14">
+            <ul className="flex flex-col mt-14 ">
 
                 {Links.map((link) => (
                     <li
                         key={link.name}
                         onClick={() => handleItemClick(link.name)}
-                        className={`text-xl font-semibold py-4  cursor-pointer  ${open ? "max-lg:ml-[-32px] max-lg:rounded-r-full rounded-xl" : "ml-[-32px] rounded-r-full"} ${activeItem === link.name
+                        className={`relative text-xl font-semibold py-4  cursor-pointer  ${open ? "max-lg:ml-[-32px] max-lg:rounded-r-full rounded-xl" : "ml-[-32px] rounded-r-full"} ${activeItem === link.name
                             ? "bg-primary text-white" // Active item style
                             : "text-text-primary" // Default style
                             }`}>
@@ -57,8 +57,15 @@ const Sidebar = ({ open }) => {
                             <span className="text-2xl">{link.icon}</span>
                             <span className={`text-xl font-semibold ${open ? "hidden max-lg:contents" : ""}`}>{link.name}</span>
                         </a>
+                        {/* <span
+                            className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-indigo-100 text-indigo-800 text-sm `}
+                        >
+                            {activeItem}
+                        </span> */}
                     </li>
+
                 ))}
+
             </ul>
 
             <div
