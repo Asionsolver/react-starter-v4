@@ -25,15 +25,15 @@ const Modal = ({ isOpen, onClose, title, children }) => {
     }, []);
 
     return (
-        <div className={`fixed backdrop-blur-sm inset-0 z-50 flex items-center justify-center transition-opacity duration-400  ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <div className={` fixed backdrop-blur-sm inset-0 z-50 flex items-center justify-center transition-opacity duration-400  ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
 
 
             <div
-                className={`relative  w-full max-w-7xl t  bg-white border border-secondary rounded-2xl shadow-sm transform transition-all duration-400 ${isOpen ? 'scale-100' : 'scale-95'} `}
+                className={` relative  w-full max-w-7xl t  bg-white border border-secondary rounded-2xl shadow-sm transform transition-all duration-400 ${isOpen ? 'scale-100' : 'scale-95'} `}
 
             >
-                <div className="mb-4 p-4  border-b border-secondary  flex items-center justify-between">
-                    <h2 className="text-xl text-text-primary font-semibold">{title}</h2>
+                <div className=" mb-4 p-4  border-b border-secondary  flex items-center justify-between">
+                    <h2 className="ml-5 text-xl text-text-primary font-semibold">{title}</h2>
                     <button
                         onClick={onClose}
                         className="rounded-full p-1 hover:bg-gray-100"
@@ -42,7 +42,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
                         <X className="h-6 w-6 text-text-primary" />
                     </button>
                 </div>
-                <div className="max-h-[calc(100vh-200px)] overflow-y-auto">
+                <div className="max-h-[calc(100vh-200px)] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:mb-4 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-secondary dark:[&::-webkit-scrollbar-thumb]:bg-primary overflow-y-auto">
                     {children}
                 </div>
             </div>

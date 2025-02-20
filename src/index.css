@@ -11,12 +11,16 @@
   --color-gray: #696969;
   --color-gray-light: #aaa;
   --color-text-primary: #424866;
+  --color-border-color: #EAE7E7;
 
   /*Custom Breakpoint */
    --breakpoint-xs: 361px;
    --breakpoint-xsm: 441px;       
 
 }
+
+
+
 
 .container{
   @apply relative max-w-full min-h-screen overflow-hidden font-display transition duration-1000 delay-700 ease-in-out bg-[#EAEAEA] before:content-[''] before:transition before:duration-[1800ms] before:ease-in-out before:absolute before:bg-[linear-gradient(-45deg,#16CABF,#0E746E)] before:w-[2000px] before:top-[-10%] before:h-[2000px] before:transform before:rounded-full before:z-6 ;
