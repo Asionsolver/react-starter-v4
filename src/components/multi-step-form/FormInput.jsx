@@ -1,3 +1,4 @@
+import MultiSelectDropdown from "./MultiSelectDropdown"
 
 
 const FormInput = () => {
@@ -43,8 +44,9 @@ const FormInput = () => {
                 </div>
                 <div className="flex gap-x-5">
                     <div className="w-full relative">
-                        <input type="text" name="messOwnerName" id="messOwnerName" className="h-[50px] w-full px-4 py-2 text-lg outline-none border  border-border-color rounded  duration-200 peer bg-inherit focus:ring-0 focus:border-primary placeholder-transparent" placeholder="Mess Owner Name" />
-                        <label className="pointer-events-none absolute -top-[8px] px-2 bg-white left-[8px] text-primary text-sm peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray peer-placeholder-shown:top-[12px] peer-placeholder-shown:bg-white peer-placeholder-shown:px-2 transition-all peer-focus:-top-[8px] peer-focus:text-primary peer-focus:text-sm peer-focus:bg-white peer-focus:px-2">Mess Owner Name</label>
+                        {/* <input type="text" name="roomType" id="roomType" className="h-[50px] w-full px-4 py-2 text-lg outline-none border  border-border-color rounded  duration-200 peer bg-inherit focus:ring-0 focus:border-primary placeholder-transparent" placeholder="Room Type" />
+                        <label className="pointer-events-none absolute -top-[8px] px-2 bg-white left-[8px] text-primary text-sm peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray peer-placeholder-shown:top-[12px] peer-placeholder-shown:bg-white peer-placeholder-shown:px-2 transition-all peer-focus:-top-[8px] peer-focus:text-primary peer-focus:text-sm peer-focus:bg-white peer-focus:px-2">Room Type</label> */}
+                        <MultiSelectDropdown />
                     </div>
 
                     {/* Total Floor */}
